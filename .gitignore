@@ -1,0 +1,44 @@
+# Ignore everything
+/*
+
+# But not these files...
+!.gitconfig
+!.gitignore
+!.gitattributes
+!.gitmodules
+!.gitignore-general
+!.git-template
+!.git-prompt.sh
+!.hosts
+
+!.ssh
+.ssh/*
+!.ssh/config
+
+!.emacs.d
+
+!.bash_profile
+!.shcfg
+.shcfg/macros
+
+!.zshrc
+
+!.ghci
+
+!.inputrc
+
+!scripts
+scripts/log.txt
+
+!git
+
+!.oh-my-zsh
+
+.bashcfg/env-vars
+
+# what is this?
+.emacs.d/tramp
+
+.#*
+
+.emacs.d/eshell/*
