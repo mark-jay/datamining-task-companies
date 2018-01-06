@@ -42,7 +42,7 @@ public class MapperService {
     }
 
     private String resolveCompany(ArrayList<Company> companies, String company) {
-        IndexedCompany indexedCompany = companies.stream()
+        IndexedCompany indexedCompany = companies.parallelStream()
                 .map(comp -> new IndexedCompany(comp, similarityService.calcSimilarity(comp.getCompanyName(), company)))
                 .max(Comparator.comparing(IndexedCompany::getIndex))
                 .get();
