@@ -9,13 +9,11 @@ import org.markjay.model.OutputDataRow;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 public class MapperServiceIT {
 
     @Test
     public void testRun() throws Exception {
-        CSVParser parser = new CSVParser();
+        CSVSerializer parser = new CSVSerializer();
         MapperService mapper = new MapperService();
         ArrayList<Company> companies = parser.parse(Company.class, "Input_1_Company_list.txt");
         ArrayList<InputDataRow> input = parser.parse(InputDataRow.class, "Input_2_Main_file.txt");
