@@ -1,44 +1,23 @@
-# Ignore everything
-/*
+# java specific
+.project/
+target/
+bin/
+.settings/
+.classpath/
+.idea
+*.iml
+*.class
 
-# But not these files...
-!.gitconfig
-!.gitignore
-!.gitattributes
-!.gitmodules
-!.gitignore-general
-!.git-template
-!.git-prompt.sh
-!.hosts
+# emacs temp
+*\~
 
-!.ssh
-.ssh/*
-!.ssh/config
+# emacs unsaved
+\#*\#
 
-!.emacs.d
+# emacs' sessions
+.emacs.d/session*
 
-!.bash_profile
-!.shcfg
-.shcfg/macros
+emacs/.emacs.d/eshell/*
 
-!.zshrc
-
-!.ghci
-
-!.inputrc
-
-!scripts
-scripts/log.txt
-
-!git
-
-!.oh-my-zsh
-
-.bashcfg/env-vars
-
-# what is this?
-.emacs.d/tramp
-
-.#*
-
-.emacs.d/eshell/*
+# other ignored files:
+ignored

@@ -1,8 +1,0 @@
-"Krassmann Transport", "Krassmann Transporte"
-"Mann Lines", "Mannlines"
-"Horst Mosolf Automotive", "Mosolf Automitive railway"
-"DB schekler", "DB schekler automotive railway"
-"Automotive S.P.B.", "Automitive s.p.b"
-"FIHHWINES OYJ / PLC", "Fihhwines plc"
-"Schöne linie", "Schone linie"
-"Ã³brigens auto", "Übrigens auto"
