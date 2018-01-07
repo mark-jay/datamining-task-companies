@@ -1,0 +1,9 @@
+language: java
+jdk:
+- oraclejdk8
+notifications:
+  email:
+    recipients:
+    - fallen.s4e@gmail.com
+    on_success: change
+    on_failure: always
