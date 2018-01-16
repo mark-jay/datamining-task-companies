@@ -1,9 +1,6 @@
 package org.markjay.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import net.sf.jsefa.csv.annotation.CsvDataType;
 import net.sf.jsefa.csv.annotation.CsvField;
 
@@ -16,6 +13,7 @@ import net.sf.jsefa.csv.annotation.CsvField;
 @Data
 @ToString
 @CsvDataType()
+@EqualsAndHashCode(exclude = "index")
 public class OutputDataRow {
     @CsvField(pos = 1)
     private String recordId;
@@ -25,4 +23,6 @@ public class OutputDataRow {
     private String companyName;
     @CsvField(pos = 4)
     private String companyId;
+    @CsvField(pos = 5)
+    private String index;
 }

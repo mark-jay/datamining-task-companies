@@ -33,15 +33,18 @@ public class MapperService {
     }
 
     private OutputDataRow mapRow(ArrayList<Company> companies, InputDataRow input) {
+        IndexedCompany indexedCompany = resolveCompany(companies, input.getCompany());
         return new OutputDataRow(
                 input.getRecordId(),
                 input.getHuinya(),
                 input.getCompany(),
-                resolveCompany(companies, input.getCompany())
+                indexedCompany.getCompany().getCompanyCode(),
+                indexedCompany.getIndex() + ""
+
         );
     }
 
-    private String resolveCompany(ArrayList<Company> companies, String company) {
+    private IndexedCompany resolveCompany(ArrayList<Company> companies, String company) {
         IndexedCompany indexedCompany = companies.parallelStream()
                 .map(comp -> new IndexedCompany(comp, similarityService.calcSimilarity(comp.getCompanyName(), company)))
                 .max(Comparator.comparing(IndexedCompany::getIndex))
@@ -52,6 +55,6 @@ public class MapperService {
                 noColor(" was resolved to "), colored(Color.ANSI_BLUE, indexedCompany.getCompany().toString()),
                 noColor(" with index = "), colored(Color.ANSI_GREEN, indexedCompany.getIndex()+"")
         );
-        return indexedCompany.getCompany().getCompanyCode();
+        return indexedCompany;
     }
 }
